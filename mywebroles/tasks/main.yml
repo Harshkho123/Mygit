@@ -1,2 +1,11 @@
 ---
 # tasks file for mywebroles
+
+- hosts: all 
+  become: yes
+  tasks: 
+     name: "I want to install webserver"
+     apt: 
+        name: apache2
+        status: present 
+        
