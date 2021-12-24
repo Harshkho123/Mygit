@@ -4,8 +4,11 @@
 - hosts: all 
   become: yes
   tasks: 
-     name: "I want to install webserver"
-     apt: 
+    - name: "I want to install webserver"
+      apt: 
         name: apache2
         status: present 
-        
+
+- roles: 
+     - {role: mywebroles}
+
